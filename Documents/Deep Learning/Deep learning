@@ -1,0 +1,9 @@
+import h5py
+import numpy as np
+filepath = '/home/hnozadi/comb_PT_2mm.mat'
+arrays = {}
+f = h5py.File(filepath)
+for k, v in f.items():
+    arrays[k] = np.array(v)
+W=arrays['W']
+
